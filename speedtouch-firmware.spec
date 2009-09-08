@@ -1,7 +1,7 @@
 %define name speedtouch-firmware
 %define oldname speedtouch_mgmt
 %define version 0.1
-%define release %mkrel 7
+%define release %mkrel 8
 #http://download.ethomson.com/download/WebUpgrade_MacOSX_R3.zip
 #http://download.ethomson.com/download/KQD6_R204.zip
 #http://www.speedtouch.com/download/drivers/USB/SpeedTouch330_firmware_3012.zip
