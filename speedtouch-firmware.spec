@@ -19,7 +19,7 @@ Alcatel Speedtouch USB adsl modem microcode. Copyright Alcatel.
 Needed to make the modem work.
 
 %prep
-%setup -q -n %{oldname}-%{version}
+%setup -q -n speedtouch_mgmt-%{version}
 mv mgmt.o mgmt_rev0.o
 
 %build
