@@ -1,23 +1,16 @@
-%define name speedtouch-firmware
-%define oldname speedtouch_mgmt
-%define version 0.1
-%define release %mkrel 8
 #http://download.ethomson.com/download/WebUpgrade_MacOSX_R3.zip
 #http://download.ethomson.com/download/KQD6_R204.zip
 #http://www.speedtouch.com/download/drivers/USB/SpeedTouch330_firmware_3012.zip
-%define url http://speedtouch.sourceforge.net
 
-Name:		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name:		speedtouch-firmware
+Version: 	0.1
+Release: 	9
 License: 	Commercial
 Group:		System/Kernel and hardware
-URL: 		%{url}
+URL: 		http://speedtouch.sourceforge.net
 Source0: 	%{oldname}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 Summary: 	Alcatel Speedtouch USB adsl modem microcode
-Provides:	%{oldname}
-Obsoletes:	%{oldname}
+%rename		speed_touch_mgmt
 BuildRequires:	speedtouch-firmware-extractor
 BuildArch:	noarch
 
@@ -38,15 +31,8 @@ for rev in 0 2 4; do
 done
 
 %install
-rm -rf $RPM_BUILD_ROOT
-
-mkdir -p -m 755 $RPM_BUILD_ROOT/lib/firmware
-install -m 644 speedtch-*.bin.* $RPM_BUILD_ROOT/lib/firmware
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+mkdir -p -m755 %{buildroot}/lib/firmware
+install -m644 speedtch-*.bin.* %{buildroot}/lib/firmware
 
 %files
-%defattr(-,root,root)
 /lib/firmware/speedtch-*.bin.*
-
