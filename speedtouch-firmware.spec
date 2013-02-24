@@ -8,7 +8,7 @@ Release: 	9
 License: 	Commercial
 Group:		System/Kernel and hardware
 URL: 		http://speedtouch.sourceforge.net
-Source0: 	%{oldname}-%{version}.tar.bz2
+Source0: 	speed_touch_mgmt-%{version}.tar.bz2
 Summary: 	Alcatel Speedtouch USB adsl modem microcode
 %rename		speed_touch_mgmt
 BuildRequires:	speedtouch-firmware-extractor
