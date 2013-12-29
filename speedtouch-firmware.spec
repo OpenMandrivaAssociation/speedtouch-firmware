@@ -4,7 +4,7 @@
 
 Name:		speedtouch-firmware
 Version: 	0.1
-Release: 	10
+Release: 	11
 License: 	Commercial
 Group:		System/Kernel and hardware
 URL: 		http://speedtouch.sourceforge.net
